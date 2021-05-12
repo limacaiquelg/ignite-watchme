@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+
+import { GenreResponseProps } from '../App';
 import { Button } from '../components/Button';
 
 import { api } from '../services/api';
@@ -7,12 +9,6 @@ import '../styles/sidebar.scss';
 
 interface SideBarProps {
   setSelectedGenre: (responseData: GenreResponseProps) => void
-}
-
-export interface GenreResponseProps {
-  id: number;
-  name: 'action' | 'comedy' | 'documentary' | 'drama' | 'horror' | 'family';
-  title: string;
 }
 
 export function SideBar(props: SideBarProps) {
